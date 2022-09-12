@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- pinto agregar estilos -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Ejercicio</title>
+</head>
+
+<body>
+  <article>
+    <h2>Agregar alumno</h2>
+    <form class="form_cargar-alumno" action="./nexo_poo.php" method="post">
+      <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="ej: Valentin" required>
+      </div>
+      <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="ej: Begnis" required>
+      </div>
+      <div>
+        <label for="legajo">Legajo:</label>
+        <input type="number" id="legajo" name="legajo" min="100" max="999" placeholder="ej: 111" required>
+      </div>
+      <input type="hidden" id="accion" name="accion" value="agregar"/>
+      <button>Agregar</button>
+    </form>
+  </article>
+  <article>
+    <h2>Modificar alumno</h2>
+    <form class="form_cargar-alumno" action="./nexo_poo.php" method="post">
+      <div>
+        <label for="legajo">Legajo:</label>
+        <input type="number" id="legajo" name="legajo" min="100" max="999" placeholder="ej: 111" required>
+      </div>
+      <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="ej: Valentin" required>
+      </div>
+      <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="ej: Begnis" required>
+      </div>
+      <input type="hidden" id="accion" name="accion" value="modificar"/>
+      <button>Modificar</button>
+    </form>
+  </article>
+  <article>
+    <h2>Borrar alumno</h2>
+    <form class="form_cargar-alumno" action="./nexo_poo.php" method="post">
+      <div>
+        <label for="legajo">Legajo:</label>
+        <input type="number" id="legajo" name="legajo" min="100" max="999" placeholder="ej: 111" required>
+      </div>
+      <input type="hidden" id="accion" name="accion" value="borrar"/>
+      <button>Borrar</button>
+    </form>
+  </article>
+  <article>
+    <h2>Listar alumnos</h2>
+    <form class="form_cargar-alumno" action="./nexo_poo.php" method="get">
+      <input type="hidden" id="accion" name="accion" value="listar"/>
+      <button>Listar</button>
+    </form>
+  </article>
+</body>
+
+</html>
